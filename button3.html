@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Про себе</title>
+
+    <style>
+        body {
+            margin:0;
+            padding:0;
+        }
+
+        header {
+            position:relative;
+        }
+
+        .bg-img {
+            position:absolute;
+            width:1680px;
+            height:923px;
+            left:0;
+            top:0;
+            object-fit:cover;
+            z-index:1;
+        }
+
+        .square {
+            position:absolute;
+            width:250px;
+            height:400px;
+            background:rgb(58,58,58);
+            border:10px solid black;
+            z-index:10;
+        }
+
+        .t1 {top:300px; left:500px;}
+        .t2 {top:300px; left:900px;}
+
+        .text-btn {
+            position:absolute;
+            padding:20px 40px;
+            background:black;
+            color:white;
+            text-decoration:none;
+            font-size:24px;
+            border-radius:10px;
+            transition:0.3s;
+            z-index:10;
+        }
+
+        .text-btn:hover {
+            background:rgb(200,200,200);
+            color:black;
+        }
+
+        .b1 {top:620px; left:550px;}
+        .b2 {top:620px; left:950px;}
+
+        .popup {
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.7);
+            opacity:0;
+            visibility:hidden;
+            transition:0.4s;
+            z-index:1000;
+        }
+
+        .popup:target {
+            opacity:1;
+            visibility:visible;
+        }
+
+        /* ===== Контент popup ===== */
+        .popup-content {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%) scale(0.8);
+            background:white;
+            padding:20px 40px;
+            border-radius:10px;
+            transition:0.4s;
+            z-index:1001;
+            width:600px;
+            max-height:850px;      /* обмежує висоту popup */
+            overflow-y:auto;        /* додає вертикальну прокрутку */
+            text-align:center;
+            font-size:24px;
+            line-height:1.5;
+        }
+
+        .popup:target .popup-content {
+            transform:translate(-50%,-50%) scale(1);
+        }
+
+        /* Кнопка всередині popup */
+        .popup-btn {
+            display:inline-block;
+            margin-top:20px;
+            padding:15px 30px;
+            background:#000;
+            color:#fff;
+            text-decoration:none;
+            font-size:20px;
+            border-radius:10px;
+            transition:0.3s;
+        }
+
+        .popup-btn:hover {
+            background:#555;
+            color:#fff;
+        }
+
+        .close {
+            position:absolute;
+            top:10px;
+            right:15px;
+            font-size:25px;
+            text-decoration:none;
+            color:black;
+            cursor:pointer;
+        }
+
+        .text-frame1 {
+            position:absolute;
+            top:300px;
+            left:135px;
+            width:1000px;
+            text-align:center;
+            font-size:50px;
+            white-space:pre-line;
+            user-select:none;
+            z-index:15;
+            color:white;
+        }
+
+        .text-frame2 {
+            position:absolute;
+            top:300px;
+            left:545px;
+            width:1000px;
+            text-align:center;
+            font-size:50px;
+            white-space:pre-line;
+            user-select:none;
+            z-index:15;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="close"></div>
+
+<header>
+
+    <div class="text-frame1">
+        Звичайний
+        сайт
+    </div>
+
+    <div class="text-frame2">
+        Сайт з
+        кнопками
+    </div>
+
+    <img src="photo2.jpg" class="bg-img">
+
+    <div class="square t1"></div>
+    <div class="square t2"></div>
+
+    <a href="#popup1" class="text-btn b1">500 Грн</a>
+    <a href="#popup2" class="text-btn b2">550 Грн</a>
+
+    <!-- ===== POPUP 1 ===== -->
+    <div id="popup1" class="popup">
+        <div class="popup-content">
+            <a href="#close" class="close">✖</a>
+            <h2>Звичайний сайт</h2>
+            <p>Це вже більш просунутий сайт, де додані кнопки, що можна натискати та переходити на новий рядок (посилання YouTube, Вікіпедія тощо).</p>
+            <h3>Приклад фото:</h3>
+            <img src="photo.jpg" alt="Моє фото" style="width:100%; max-width:500px; height:auto; border-radius:10px;">
+            <br>
+            <a href="index3.html" target="_blank" class="popup-btn">Купити</a>
+        </div>
+    </div>
+
+    <!-- ===== POPUP 2 ===== -->
+    <div id="popup2" class="popup">
+        <div class="popup-content">
+            <a href="#close" class="close">✖</a>
+            <h1>Сайт з кнобками</h1>
+            <p>Це вже більш просунутий сайт, де додані кнопки, що можна натискати і переходи на новий рядок (посилання YouTube, Вікіпедія тощо). Кнопки можна ставити скільки завгодно.</p>
+            <h3>Приклад фото:</h3>
+            <img src="yy.png" alt="Моє фото" style="width:100%; max-width:500px; height:auto; border-radius:10px;">
+            <br>
+            <a href="index3.html" target="_blank" class="popup-btn">Купити</a>
+        </div>
+    </div>
+
+</header>
+
+</body>
+</html>

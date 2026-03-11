@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>сайт</title>
+
+    <style>
+        :root {
+            --text-color: 0, 0, 79;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: relative;
+            text-align: center;
+        }
+
+        header img {
+            position: absolute;
+            width: 1680px;
+            height: 923px;
+            left: 0px;
+            top: 0px;
+            object-fit: cover;
+            display: block;
+        }
+
+         .text-btn {
+            position: absolute;
+            padding: 35px;
+            background: rgb(0, 0, 0);
+            border: 5px solid black;
+            border-radius: 20px;
+            font-size: 22px;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            overflow: hidden;
+
+            transition: all 0.3s ease;
+        }
+
+        .text-btn span{
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .text-btn::after{
+            content: "натисни";
+            position: absolute;
+            left: 50%;
+            bottom: 25px; /* выше */
+            transform: translateX(-50%);
+            opacity: 0;
+            font-size: 22px; /* больше текст */
+            font-weight: bold;
+            transition: opacity 0.3s ease;
+        }
+
+        .text-btn:hover {
+            background: rgb(224, 225, 227);
+            color: black;
+            transform: scale(1.05);
+        }
+
+        .text-btn:hover span{
+            transform: translateY(-15px); /* текст немного поднимается */
+        }
+
+        .text-btn:hover::after{
+            opacity: 1;
+        }
+
+        .btn1 { top: 390px; left: 580px; }
+        .btn2 { top: 390px; left: 770px; }
+        .btn3 { top: 390px; left: 970px; }
+
+
+        .text-ggg{
+            position: absolute;
+            top: 350px;
+            left: 500px;
+            width: 700px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: black;
+            text-shadow:
+                -2px -2px 0 white,
+                 2px -2px 0 white,
+                -2px  2px 0 white,
+                 2px  2px 0 white;
+            user-select: none;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <img src="phot5.jpg">
+
+    <div class="text-ggg" id="title-text1">
+        Як купити свій сайт?
+    </div>
+
+    <a href="button1.html" class="text-btn btn1">
+        <h4>1)Договір</h4>
+    </a>
+    <a href="button2.html" class="text-btn btn2">
+        <h4>2)Про себе</h4>
+    </a>
+
+    <a href="button3.html" class="text-btn btn3">
+        <h4>3)Ціна</h4>
+    </a>
+
+
+</header>
+
+</body>
+</html>
