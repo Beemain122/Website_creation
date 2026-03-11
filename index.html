@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>сайт</title>
+
+    <style>
+        :root {
+            --text-color: 0, 0, 79;
+        }
+        @media (max-width: 768px){
+
+        .text-frame{
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            font-size: 40px;
+        }
+
+        .text-frame2{
+            top: 320px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            font-size: 20px;
+        }
+
+        .btn3{
+            top: 450px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .text-btn{
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        header img{
+            max-height: 500px;
+        }
+
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('ee2.png.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: rgb(var(--text-color));
+        }
+
+        header {
+            position: relative;
+            text-align: center;
+        }
+
+        header img {
+            width: 100%;
+            max-height: 923px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ===== ГЛАВНЫЙ ЗАГОЛОВОК (ИСПРАВЛЕН) ===== */
+        .text-frame {
+            position: absolute;
+            top: 300px;
+            left: 350px;
+
+            width: 700px;
+            height: 200px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            font-size: 70px;
+            font-weight: 900;
+            color: white;
+
+            -webkit-text-stroke: 2px black;
+            text-shadow:
+                -2px -2px 0 black,
+                 2px -2px 0 black,
+                -2px  2px 0 black,
+                 2px  2px 0 black;
+
+            white-space: pre-line;
+            user-select: none;
+            z-index: 10;
+        }
+        /* ===== КНОПКИ ===== */
+        .text-btn {
+            position: absolute;
+            padding: 35px;
+            background: rgb(79, 79, 79);
+
+            border-radius: 20px;
+            font-size: 22px;
+            cursor: pointer;
+            transition: 0.2s;
+            color: white;
+        }
+        .btn3 { top: 700px; left: 800px; }
+        .text-btn:hover {
+            background: rgba(0, 0, 0);
+            transform: scale(1.05);
+        }
+
+        /* ===== ВТОРОЙ ТЕКСТ ===== */
+        .text-frame2 {
+            position: absolute;
+            top: 604px;
+            left: 350px;
+
+            width: 700px;
+            text-align: center;
+
+            font-size: 28px;
+            font-weight: bold;
+            color: black;
+
+            text-shadow:
+                -2px -2px 0 white,
+                 2px -2px 0 white,
+                -2px  2px 0 white,
+                 2px  2px 0 white;
+
+            user-select: none;
+            z-index: 10;
+        }
+
+
+
+        .translator-sticker {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(145deg, #ffffff, #dbd9d9);
+            border: 3px solid black;
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 26px;
+            cursor: pointer;
+
+            box-shadow:
+                4px 4px 0 black,
+                6px 6px 10px rgba(0,0,0,0.4);
+
+            transition: 0.2s;
+            user-select: none;
+        }
+
+        .translator-sticker:hover {
+            transform: scale(1.1) rotate(-3deg);
+        }
+
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            top: 65px;
+            left: -45px;
+            background: #dbd9d9;
+            border: 4px solid black;
+            border-radius: 15px;
+            padding: 10px;
+            width: 180px;
+        }
+
+        .lang-dropdown div {
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .lang-dropdown div:hover {
+            background: white;
+        }
+        .text-ggg{
+            position: absolute;
+            top: 1270px;
+            left: 500px;
+
+            width: 700px;
+            text-align: center;
+
+            font-size: 28px;
+            font-weight: bold;
+            color: black;
+
+            text-shadow:
+                -2px -2px 0 white,
+                 2px -2px 0 white,
+                -2px  2px 0 white,
+                 2px  2px 0 white;
+
+            user-select: none;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <img src="photo1.jpg">
+
+    <div class="text-frame" id="title-text">
+        Розробка сайтів
+        на HTML
+    </div>
+
+    <div class="text-frame2" id="welcome-text">
+        Вітаю вас на сайт по розробці простих і не дорогих сайтів
+    </div>
+    <a href="index2.html" class="text-btn btn3" id="goIndex2">
+        <h4>Дiзнатися бiльше</h4>
+    </a>
+
+</header>
+
+</body>
+</html>
